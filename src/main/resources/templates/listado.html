@@ -36,8 +36,8 @@
             <th th:text="${a.getEdad()}"></th>
             <th th:text="${a.getCurso()}"></th>
             <th>
-                <a href="" title="Editar" class="btn btn-success">✍ Editar</a>
-                <a th:href="@{'/eliminar/' + ${a.idAlumno}}" title="Eliminar" class="btn btn-danger" >Eliminar❌</a>
+                <a th:href="@{'/editar/' + ${a.getIdAlumno()}}" title="Editar" class="btn btn-success">✍ Editar</a>
+                <a th:href="@{'/eliminar/' + ${a.getIdAlumno()}}" title="Eliminar" class="btn btn-danger" >❌ Eliminar</a>
             </th>
 
         </tr>

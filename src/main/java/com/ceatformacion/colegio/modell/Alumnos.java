@@ -1,5 +1,7 @@
 package com.ceatformacion.colegio.modell;
 
+
+
 public class Alumnos {
     private static int id;
     private int idAlumno;
@@ -10,7 +12,8 @@ public class Alumnos {
     //dos metodos constructores...uno vacio, y otro con todos menos el idAlumno
 
 
-    public Alumnos(String nombre, String curso, int edad) {
+    public Alumnos(int idAlumno,String nombre, String curso, int edad) {
+        this.idAlumno = idAlumno;
         this.nombre = nombre;
         this.curso = curso;
         this.edad = edad;
@@ -23,7 +26,12 @@ public class Alumnos {
         return idAlumno;
     }
 //temporal si no hay bbdd
-    public void setIdAlumno() {
+    public void setIdAlumno(int idAlumno)
+    {
+        this.idAlumno = idAlumno;
+    }
+    public void asignarIdAlumno()
+    {
         this.idAlumno = ++id;
     }
 
